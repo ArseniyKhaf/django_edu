@@ -4,7 +4,16 @@
 
 {% block content %}
 
-<h1>Главная страница, всем привет!</h1>
+{% for good in goods %}
+<div class="card" style="width: 18rem;">
+  <img src="{{good.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ good.name }}</h5>
+    <p class="card-text">{{ good.description }}</p>
+    <a href="#" class="btn btn-primary">Купить</a>
+  </div>
+</div>
+{% endfor %}
+
 
 {% endblock %}
-
