@@ -7,7 +7,7 @@ from main.models import Goods
 def index(request):
     goods = Goods.objects.all()
     context = {
-        "goods": goods,
+        "products": goods,
     }
     return render(request,
                   template_name="main/index.html",
