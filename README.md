@@ -8,3 +8,4 @@
 5.'python manage.py migrate'
 6.'python manage.py creatsupersuper'
 7.'python manage.py runserver'
+8.ADMIN 127.0.0.1:8000/admin/
