@@ -7,7 +7,7 @@ from main import views
 urlpatterns = [
     path('', views.index),
     path("prof/", views.profil),
-    path("drink/", views.drink)
+    path("category/<slug:slug>", views.category)
 ]
 
 if settings.DEBUG:

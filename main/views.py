@@ -23,13 +23,13 @@ def profil(request):
     return render(request, template_name="main/index.html")
 
 
-def drink(request):
-    category = Category.objects.get(name="Напитки")
+def category(request, slug):
+    category = Category.objects.get(name=slug)
     goods = Goods.objects.filter(category=category)
     context = {
         "products": goods,
     }
     return render(request,
-                  template_name="main/drink.html",
+                  template_name="main/category.html",
                   context=context,
                   )
