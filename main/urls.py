@@ -6,7 +6,8 @@ from main import views
 
 urlpatterns = [
     path('', views.index),
-    path("prof/", views.profil)
+    path("prof/", views.profil),
+    path("drink/", views.drink)
 ]
 
 if settings.DEBUG:
