@@ -1,10 +1,17 @@
 {% extends 'main\wrapper.html' %}
 
-{% block title %}Главная{% endblock %}
+{% block title %}Товары{% endblock %}
 
 {% block content %}
 
-<h1>{{product.name}}</h1>
 
+<div class="container text-center">
+    <div class="row">
+        <div class="col-sm-7"><img src="{{ product.image.url }}" class="w-50" alt="..."></div>
+        <div class="col-sm-3"><h4 align="center">{{ product.name }}</h4>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
