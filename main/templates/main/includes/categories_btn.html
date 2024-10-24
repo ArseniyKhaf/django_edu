@@ -4,9 +4,9 @@
             Категории
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Напитки</a></li>
-            <li><a class="dropdown-item" href="#">Телефоны</a></li>
-            <li><a class="dropdown-item" href="#">Ноутбуки</a></li>
+            {% for category in categories %}
+                <li><a class="dropdown-item" href="{% url 'main:categories' category.slug %}">{{ category.name }}</a></li>
+            {% endfor %}
         </ul>
         <br><br>
     </div>

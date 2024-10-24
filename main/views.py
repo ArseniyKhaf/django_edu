@@ -8,6 +8,7 @@ def index(request):
     goods = Goods.objects.all()
     context = {
         "products": goods,
+        "categories": Category.objects.all(),
     }
     return render(request,
                   template_name="main/index.html",
@@ -15,21 +16,27 @@ def index(request):
                   )
 
 
-def main(request):
-    return render(request, template_name="main/index.html")
-
-
 def profil(request):
     return render(request, template_name="main/index.html")
 
 
-def category(request, slug):
-    category = Category.objects.get(name=slug)
-    goods = Goods.objects.filter(category=category)
+def category_view(request, slug):
+    goods = Goods.objects.filter(category__slug=slug)
     context = {
         "products": goods,
+        "categories": Category.objects.all(),
     }
     return render(request,
-                  template_name="main/category.html",
+                  template_name="main/index.html",
+                  context=context,
+                  )
+
+
+def detail_view(request, slug):
+    context = {
+        "product": Goods.objects.get(slug=slug),
+    }
+    return render(request,
+                  template_name="main/detail.html",
                   context=context,
                   )

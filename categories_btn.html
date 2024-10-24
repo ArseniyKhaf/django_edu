@@ -1,0 +1,12 @@
+<div class="container-xl">
+    <div class="dropdown" align="right">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Категории
+        </button>
+        <ul class="dropdown-menu">
+            {% for category in categories %}
+                <li><a class="dropdown-item" href="{% url 'main:categories' category.slug %}">{{ category.name }}</a></li>li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>>
