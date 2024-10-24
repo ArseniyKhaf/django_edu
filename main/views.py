@@ -42,3 +42,4 @@ def detail_view(request, slug):
                   template_name="main/detail.html",
                   context=context,
                   )
+
