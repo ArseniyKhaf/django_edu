@@ -13,7 +13,7 @@
         <p>{{ product.description }}</p>
         </div>
         <div class="col-sm-3"><h4 align="left">{{ product.prise }} руб</h4>
-            <a href="{% url 'main:detail' product.slug %}" class="btn btn-primary">Купить сейчас</a>
+            <a href="{% url 'main:pay' product.slug %}" class="btn btn-primary">Купить сейчас</a>
         </div>
 
     </div>
