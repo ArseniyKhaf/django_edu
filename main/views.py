@@ -44,10 +44,9 @@ def detail_view(request, slug):
                   )
 
 
-def pay(request, slug):
-    goods = Goods.objects.get(slug=slug)
+def pay(request):
     context = {
-        "product": Goods.objects.get(slug=slug),
+        "product": Goods.objects.all(),
         "categories": Category.objects.filter(),
     }
     return render(request,
