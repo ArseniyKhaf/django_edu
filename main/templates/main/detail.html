@@ -5,13 +5,17 @@
 {% block content %}
 
 
-<div class="container text-center">
+<div class="container text-left">
     <div class="row">
-        <div class="col-sm-7"><img src="{{ product.image.url }}" class="w-50" alt="..."></div>
-        <div class="col-sm-3"><h4 align="center">{{ product.name }}</h4>
-            <p>{{ product.description }}</p>
+        <div class="col-sm-5"><img src="{{ product.image.url }}" class="w-50" alt="..."></div>
+        <div class="col-sm-4"><h4 align="left">{{ product.name }}</h4>
+        <p><b>Описание</b></p>
+        <p>{{ product.description }}</p>
         </div>
-    </div>
-</div>
+        <div class="col-sm-3"><h4 align="left">{{ product.prise }} руб</h4>
+            <a href="{% url 'main:detail' product.slug %}" class="btn btn-primary">Купить сейчас</a>
+        </div>
 
+    </div>
+</div>>
 {% endblock %}
