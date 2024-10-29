@@ -36,7 +36,7 @@ def detail_view(request, slug):
     goods = Goods.objects.get(slug=slug)
     context = {
         "product": Goods.objects.get(slug=slug),
-        "categories": Category.object.filter(),
+        "categories": Category.objects.filter(),
     }
     return render(request,
                   template_name="main/detail.html",
