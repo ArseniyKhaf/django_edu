@@ -11,7 +11,7 @@ urlpatterns = [
     path("prof/", views.profil),
     path("category/<slug:slug>", views.category_view, name='categories'),
     path("detail/<slug:slug>/", views.detail_view, name='detail'),
-    path("pay/", views.pay, name='pay'),
+    path("basket/", views.basket, name='basket'),
 ]
 
 if settings.DEBUG:

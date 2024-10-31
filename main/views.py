@@ -44,12 +44,12 @@ def detail_view(request, slug):
                   )
 
 
-def pay(request):
+def basket(request):
     context = {
         "product": Goods.objects.all(),
         "categories": Category.objects.filter(),
     }
     return render(request,
-                  template_name="main/pay.html",
+                  template_name="main/basket.html",
                   context=context,
                   )

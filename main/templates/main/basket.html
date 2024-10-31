@@ -1,0 +1,29 @@
+{% extends 'main\wrapper.html' %}
+
+{% block title %}Корзина{% endblock %}
+
+{% block content %}
+
+
+<div class="container text-left">
+    <div class="row">
+        <div class="col-sm-7">
+            <h1>Корзина</h1>
+            <img src="{{ product.image.url }}" class="w-50" alt="...">
+        </div>
+        <div class="col-sm-5"><h4 align="left">{{ product.name }}</h4>
+            <div align="left">
+                <a href="{% url 'main:basket' %}" class="btn btn-primary">Перейти к оформлению</a>
+                <br>
+                <br>
+            </div>
+            <div class="col-sm-3"><h4 align="left">{{ product.prise }} руб</h4>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
