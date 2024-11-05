@@ -26,7 +26,11 @@
             <a href="{% url 'main:basket' %}" class="btn btn-primary">В корзину</a>
         </div>
 
-
+        <div>
+            <h4>Отзывы:</h4>
+            <br>
+            <h4 align="left">{{ product.feedback }}</h4>
+        </div>
     </div>
 </div>
 {% endblock %}

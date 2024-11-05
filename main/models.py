@@ -87,7 +87,7 @@ class CategoryFeedback(models.Model):
         verbose_name_plural = "Категории"
 
 
-class Feedback:
+class Feedback(models.Model):
     """Model for goods feedback."""
 
     user = models.OneToOneField(
