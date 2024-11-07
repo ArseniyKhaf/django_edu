@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from main.models import Category, Goods
+from main.models import Category, Feedback, Goods
 
 
 def index(request):
@@ -37,6 +37,8 @@ def detail_view(request, slug):
     context = {
         "product": Goods.objects.get(slug=slug),
         "categories": Category.objects.filter(),
+        "feedback": Feedback.objects.all(),
+
     }
     return render(request,
                   template_name="main/detail.html",
